@@ -1,4 +1,4 @@
-package functions;
+package example.spring;
 
 public class Watchman {
     String name;
@@ -6,6 +6,7 @@ public class Watchman {
 
     public Watchman(String name) {
         this.name = name;
+        System.out.println("работает конструктор Сторожа");
     }
 
     public void whistle(){

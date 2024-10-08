@@ -1,4 +1,4 @@
-package functions;
+package example.spring;
 
 public class Manager {
     public Context getContext1(){

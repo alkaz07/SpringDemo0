@@ -1,4 +1,4 @@
-package functions;
+package example.spring;
 
 public class Park {
     int id;
@@ -26,6 +26,7 @@ public class Park {
 
     public Park(int id) {
         this.id = id;
+        System.out.println("работает конструктор Парка");
     }
 
     public void setWatchman(Watchman watchman) {

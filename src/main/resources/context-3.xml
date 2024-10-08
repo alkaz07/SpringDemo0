@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="watchman4" class="example.spring.Watchman">
+        <constructor-arg value="Сидоров"/>
+        <property name="park">
+            <ref bean="park4"/>
+        </property>
+    </bean>
+
+    <bean id="park4" class="example.spring.Park">
+        <constructor-arg value="33"/>
+        <property name="watchman">
+            <ref bean="watchman4"/>
+        </property>
+    </bean>
+
+
+</beans>
