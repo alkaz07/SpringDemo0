@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <bean id="bibika" class="example.spring.Car">
+        <constructor-arg value="Бибишка"/>
+        <constructor-arg value="1979"/>
+        <property name="owner">
+            <ref bean="vasya"/>
+        </property>
+    </bean>
+
+    <bean id="vasya" class="example.spring.Person">
+        <constructor-arg value="Вася"/>
+        <property name="car">
+            <ref bean="bibika"/>
+        </property>
+    </bean>
+</beans>

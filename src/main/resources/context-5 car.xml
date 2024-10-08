@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <bean id="granta" class="example.spring.Car">
+        <constructor-arg value="Гранта"/>
+        <constructor-arg value="2010"/>
+        <property name="owner">
+            <ref bean="olya"/>
+        </property>
+    </bean>
+
+    <bean id="vesta" class="example.spring.Car">
+        <constructor-arg value="Веста"/>
+        <constructor-arg value="2015"/>
+        <property name="owner">
+               <ref bean="sveta"/>
+        </property>
+    </bean>
+
+    <bean id="sveta" class="example.spring.Person">
+        <constructor-arg value="Света"/>
+        <property name="car">
+            <ref bean="vesta"/>
+        </property>
+    </bean>
+
+    <bean id="lena" class="example.spring.Person">
+        <constructor-arg value="Лена"/>
+    </bean>
+
+    <bean id="olya" class="example.spring.Person">
+        <constructor-arg value="Оля"/>
+        <property name="car">
+            <ref bean="granta"/>
+        </property>
+    </bean>
+</beans>
