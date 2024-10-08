@@ -9,6 +9,7 @@ public class Manager {
         context.park.setWatchman(context.watchman);
         return context;
     }
+
     public Context getContext2(){
         Context context= new Context();
         context.watchman = new Watchman("Петров");
